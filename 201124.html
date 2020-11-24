@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body{
+   background-image:url(pic2.jpg);
+ }
+ 
+ .screen{
+   background-color:yellow;
+   border:solid black 1px;
+   width:160px;
+ }
+ .special{
+   background-color:#24b7e0;
+   border:solid #1832c7 1px;
+   width:40px;
+   height:30px;
+ }
+ .normal{
+   background-color:white;
+   border:solid green 1px;
+   width:40px;
+   height:30px;
+ }
+</style>
+<script>
+  
+  function lclick(e){
+    scr.value=scr.value+e.value;
+  }
+  function clr(e){
+    scr.value=""
+  }
+ 
+</script>
+</head>
+<body>
+ <input class="screen" type="textarea" id="scr"><br/>
+ <input class="special" type="button"  value="(" onclick="lclick(this)">
+ <input class="special" type="button"  value=")" onclick="lclick(this)"> 
+ <input class="special" type="button"  value="%" onclick="lclick(this)"> 
+ <input class="special" type="button"  value="C" onclick="clr(this)"> <br/>
+ <input class="normal" type="button"  value="7" onclick="lclick(this)"> 
+ <input  class="normal" type="button"  value="8" onclick="lclick(this)"> 
+ <input  class="normal" type="button"  value="9" onclick="lclick(this)"> 
+ <input  class="special" type="button"  value="/" > <br/>
+  <input  class="normal" type="button"  value="4" onclick="lclick(this)"> 
+ <input  class="normal" type="button"  value="5" onclick="lclick(this)"> 
+ <input  class="normal" type="button"  value="6" onclick="lclick(this)"> 
+ <input  class="special" type="button"  value="*" > <br/>
+ <input  class="normal" type="button" value="1" onclick="lclick(this)">
+ <input  class="normal" type="button"  value="2" onclick="lclick(this)"> 
+ <input  class="normal" type="button"  value="3" onclick="lclick(this)"> 
+ <input  class="special" type="button"  value="-" > <br/>
+ <input  class="normal" type="button"  value="0" onclick="lclick(this)"> 
+  <input  class="special" type="button"  value="." onclick="lclick(this)"> 
+   <input class="special" type="button"  value="=" > 
+ <input  class="special" type="button"  value="+" onclick="lclick(this)">    <br/>
+  
+</body>
+</html>
