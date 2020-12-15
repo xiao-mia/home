@@ -5,13 +5,13 @@
 <style>
   body{
   height:100%;
-  width:100%;
+  width:30%;
   } 
 
  .screen{
    background-color:green;
    border: solid black 1px;
-   width:93%;
+   width:93.15%;
    height:25%;
  }
  .special{
@@ -37,7 +37,9 @@
     scr.value=""
   }
   function calc(){
-    scr.value = eval( scr.value )
+    x2=eval(scr.value)
+    x3=x2.toPrecision(15)
+    scr.value=parseFloat(x3)
     
   }
 </script>
