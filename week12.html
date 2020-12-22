@@ -1,15 +1,29 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      .hit{
+        /*border: solid blue;*/
+        border-color: blue;
+        border-style: solid;
+        border-width: 10px;
+      }
+    </style>
+  </head>
   <body>
     <script>
     var counter=0;
+    var hitcount=0;
+    
+    
+    
     function monkey(){
-      if(counter%2){
+      if(Math.random()<=0.5){
         img1.src="img/o.png"
       }else{
         img1.src="img/x.png"
+        counter=counter+1;
       }
-      counter=counter+1;
+      img1.className=""
     }
       
       function reset(){
@@ -23,7 +37,8 @@
       function hit(e){
         
         if(e.src=="file:///C:/temp/home/img/o.png"){
-          hitcount=hitcount+1
+          hitcount=hitcount+1;
+          e.className="hit"
         }
         
       }
